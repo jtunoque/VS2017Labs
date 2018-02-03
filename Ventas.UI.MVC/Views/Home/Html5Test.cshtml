@@ -1,0 +1,52 @@
+﻿
+@{
+    Layout = "~/Views/Shared/_LayoutMain.cshtml";
+}
+
+<section>
+    <audio controls="controls" class="musica">
+        <source src="~/Content/media/musica.mp3" type="audio/mpeg" />
+        Este formato no está soportado en su browser
+    </audio>
+</section>
+
+<section>
+    <video controls="controls" class="video">
+        <source src="~/Content/media/html5.mp4" type="video/mp4" />
+        Este formato no está soportado en su browser
+    </video>
+</section>
+
+<section>
+    <canvas id="myCanvas" class="myCanvas">
+    </canvas>
+</section>
+
+<script type="text/javascript">
+    /*Trabajando con Canvas*/
+    var c = document.getElementById("myCanvas");
+    var ctx = c.getContext("2d");
+    //Gradiente
+    var grd = ctx.createLinearGradient(0, 0, 200, 0);
+    grd.addColorStop("0", "red");
+    grd.addColorStop("1", "white");
+    //Creando un rectangulo
+    ctx.fillStyle = grd;
+    ctx.fillRect(0, 0, 300, 180);
+
+    //Agregando un texto
+    //ctx.font = "30px Arial";
+    //ctx.fillStyle = "gray";
+    //ctx.fillText("Visual Studio 2017", 10, 40);
+
+    var img = new Image();
+    img.src = "/Content/images/paisaje.jpg";
+    img.onload = function () {
+        ctx.drawImage(img, 0, 0, 300, 200);
+        ctx.font = "30px Arial";
+        ctx.fillStyle = "white";
+        ctx.fillText("No copiar", 10, 40);
+    }
+
+</script>
+

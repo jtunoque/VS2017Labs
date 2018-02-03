@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Sistema de Ventas On-Line</title>
+    <link href="~/Content/SiteMain.css" rel="stylesheet" />
+</head>
+<body>
+    <header>
+        <a class="headerlog">
+            <img src="~/Content/images/logo.png" />
+        </a>
+        <nav>
+            <ul style="">
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Registro</a></li>
+                <li><a href="#">Producto</a></li>
+                <li><a href="#">Comprar</a></li>
+                <li><a href="#">Ubicanos</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="content">
+        @RenderBody()       
+    </section>
+    <footer>
+        Nuestra dirección - Los alamos 2344 - Surco
+    </footer>
+</body>
+</html>
